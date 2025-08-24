@@ -63,14 +63,14 @@ export default function HowItWorks() {
         </div>
 
         {/* Process Steps */}
-        <div className="space-y-16 max-w-7xl mx-auto">
+        <div className="space-y-10 max-w-6xl mx-auto">
           {processSteps.map((process, index) => (
-            <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+            <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white rounded-3xl p-8 shadow-sm border border-gray-200/50 hover:shadow-md transition-all duration-300 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
               {/* Content */}
-              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+              <div className={`space-y-4 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                 {/* Step Number and Title */}
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-14 h-14 bg-gradient-to-r from-dark-green to-muted-aqua rounded-full flex items-center justify-center text-white font-bold text-lg">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-dark-green to-muted-aqua rounded-full flex items-center justify-center text-white font-bold text-base">
                     {process.step}
                   </div>
                   <h3 className="heading-lg text-deep-navy">
@@ -108,14 +108,14 @@ export default function HowItWorks() {
               </div>
 
               {/* Image */}
-              <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <div className="relative group">
+              <div className={`flex justify-center ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                <div className="relative group w-fit">
                   <Image
                     src={process.image}
                     alt={`${process.title} process illustration`}
-                    width={500}
-                    height={400}
-                    className="rounded-2xl shadow-lg w-full h-auto group-hover:shadow-xl transition-shadow duration-300"
+                    width={300}
+                    height={300}
+                    className="rounded-2xl shadow-sm w-full h-auto max-w-80 max-h-80 object-cover group-hover:shadow-md transition-all duration-300 aspect-square border border-gray-200/60 group-hover:border-gray-300"
                   />
                   
                   {/* Overlay with step number */}

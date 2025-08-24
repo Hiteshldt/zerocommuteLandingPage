@@ -2,7 +2,6 @@ import Hero from './components/Hero'
 import Problem from './components/Problem' 
 import Solution from './components/Solution'
 import ImpactKPIs from './components/ImpactKPIs'
-import HowItWorks from './components/HowItWorks'
 
 // Home page - Main landing page for ZeroCommute
 export default function Home() {
@@ -19,9 +18,6 @@ export default function Home() {
 
       {/* Impact KPIs Section - Environmental and business metrics */}
       <ImpactKPIs />
-
-      {/* How It Works Section - 6-step process flow */}
-      <HowItWorks />
     </>
   )
 }
