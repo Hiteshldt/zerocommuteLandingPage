@@ -1,0 +1,183 @@
+# ZeroCommute — Landing Page Build Brief (Prompt for Junior Engineer)
+
+## Goal & Tone
+
+Build a **very simple, professional, and elegant website** for a climate-tech mobility solution. Prioritize clarity, credibility, and fast performance. Design must be **mobile-first**, minimal, and clean. Visual tone: modern, calm, climate-forward, with generous whitespace and short copy.
+
+---
+
+## Tech Stack (keep it lightweight)
+
+* **Framework:** Next.js (App Router) + **TypeScript**
+* **Styling:** Tailwind CSS (utility-first, no heavy UI kits)
+* **Icons (optional):** lucide-react
+* **Images:** place under `/public/images` and import with `next/image`
+* **Logo:** Use the provided official logo file (place it in `/public/images/logo.png`)
+
+> If you prefer pure static HTML/CSS, keep the same section structure and content below.
+
+---
+
+## Project Structure
+
+```
+/zerocommute-landing
+  /app
+    /about
+      page.tsx
+    /contact
+      page.tsx
+    /technology
+      page.tsx
+    /components
+      Footer.tsx
+      Header.tsx
+      Hero.tsx
+      Problem.tsx
+      Solution.tsx
+      HowItWorks.tsx
+      ImpactKPIs.tsx
+      Market.tsx
+      Revenue.tsx
+      About.tsx
+      ContactBlock.tsx
+      CTA.tsx
+    favicon.ico
+    globals.css
+    layout.tsx
+    page.tsx   // Home page (main)
+  /public/images
+    logo.png
+    BusImage.jpg (1780x834)
+    peopleImage.jpg (1290x636)
+    Founder1.jpg (500x500)
+    Founder2.jpg (500x500)
+    Founder3.jpg (500x500)
+    Founder4.jpg (500x500)
+    Process1.jpg (400x400)
+    Process2.jpg (400x400)
+    Process3.jpg (400x400)
+    Process4.jpg (400x400)
+    Process5.jpg (400x400)
+    Process6.jpg (400x400)
+  package.json
+  README.md
+```
+
+---
+
+## Global Design System
+
+* **Brand Colors:**
+
+  * Dark Green `#28723e` (primary)
+  * Light Grayish Beige `#c4d1bd` (background accent)
+  * Soft Mint Green `#ceebcd` (secondary accent)
+  * Muted Aqua Green `#68a68c` (supportive accent)
+  * Deep Navy Blue `#002f4b` (for strong contrast / footer / header background)
+* **Typography:** System fonts or Inter (400/600/800). Headings tight, body 16–18px.
+* **Spacing:** Section paddings \~ `py-16 md:py-24`; max content width `max-w-6xl`.
+* **Cards:** subtle shadows, rounded-2xl; hover lift on desktop.
+* **Buttons:** Primary (solid Dark Green), Secondary (outline Navy Blue). Always high-contrast.
+* **Accessibility:** semantic tags, alt text for every image, focus styles visible.
+
+---
+
+## Pages & Sections
+
+### 1) `/` (Home Page — Main)
+
+Navigation (sticky): Logo (provided file) + links: Home • Technology • About • Contact
+
+#### Hero
+
+* **Background visual:** `BusImage.jpg` (1780x834)
+* **Headline (H1):** Net Zero Corporate Commutes, Made Real.
+* **Subhead:** Electric double-decker shuttles + real-time CO₂ tracking for UAE corporates.
+* **Primary CTA:** **Book a Pilot** (scrolls to Contact).
+* **Secondary CTA:** **How It Works** (scrolls to process).
+
+#### Problem
+
+* 3–4 stat cards: wasted time, Scope 3 emissions, fuel burden, parking shortages.
+
+#### Solution
+
+* 4 tiles: seats, Wi-Fi, ESG dashboard, bio-facade integration.
+
+#### Impact
+
+* KPI band: cars off road, petrol saved, CO₂ avoided, hours reclaimed, oxygen trees, CO₂ captured.
+
+#### CTA
+
+* Invite to pilot the UAE’s first ZeroCommute fleet.
+
+---
+
+### 2) `/technology`
+
+* Section: **Technology Overview**
+
+  * Cards for: Employee App & QR, Fleet Ops, ESG Dashboard, Bio-Facade Module.
+* Section: **How It Works** (6-step flow with process images).
+* Optional: Market & Revenue accordions.
+
+---
+
+### 3) `/about`
+
+* Headline: **Who We Are**
+* Founders grid with 4 cards using `Founder1–4.jpg` (headshot, name, role, short bio).
+* Optional section: Mission/vision statement.
+
+---
+
+### 4) `/contact`
+
+* Contact block:
+
+  * **Phone:** +971 55 845 5065
+  * **Email:** [mail@zerocommute.ae](mailto:mail@zerocommute.ae)
+  * **WhatsApp:** wa.me/918590325180
+* Inline form (Name, Work Email, Company, Message) → just console log for now.
+* Short intro: “Ready to reclaim commutes and cut Scope 3? Let’s talk.”
+
+---
+
+## Footer (global)
+
+* Left: Logo (small) + © ZeroCommute {currentYear}
+* Center: navigation links (Home, Technology, About, Contact)
+* Right: Email + WhatsApp icon links
+
+---
+
+## Asset Placement & Alt Text
+
+* **BusImage.jpg** → Hero background
+* **peopleImage.jpg** → Problem or Market section
+* **Founder1–4.jpg** → About page
+* **Process1–6.jpg** → Technology → How It Works steps
+
+---
+
+## Acceptance Criteria (what ‘done’ looks like)
+
+1. 4 pages exist with routes `/`, `/technology`, `/about`, `/contact`.
+2. Navigation links between all pages.
+3. Hero loads quickly with optimized image.
+4. KPI values shown on home.
+5. Technology and process steps correctly mapped.
+6. About page shows all 4 founders.
+7. Contact page has working links and form.
+8. Footer appears on every page.
+
+---
+
+## Developer Notes
+
+* Keep components small and stateless.
+* No client-side libraries unless essential.
+* Use Tailwind for spacing/typography; keep CSS under 200 lines in `globals.css`.
+* Commit meaningful messages; include a short README with run instructions.

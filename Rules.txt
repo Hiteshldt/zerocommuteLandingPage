@@ -1,0 +1,6 @@
+1. Keep Code Maintainable, clean and clear and much comments
+2. Follow the Structure nicely
+3. User the content along with the Structure to fill the website
+4. Keep it very minimal, simple and Responsive
+5. follow the color code schema properly
+6. user the assets images accordingly over the website, ignore the Raw files
