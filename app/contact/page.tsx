@@ -30,25 +30,48 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // For now, just log to console as specified in requirements
-    console.log('Contact form submission:', formData)
-    
-    // Simulate API call delay
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitMessage('Thank you for your interest! We\'ll be in touch within 24 hours.')
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        message: ''
+    try {
+      // Send email using EmailJS or Web3Forms
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '46cce68b-d6b1-4786-b40e-7b8fa891c4dc', // Web3Forms access key
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+          to: 'mail@zerocommute.io',
+          subject: 'New Contact Form Submission from ZeroCommute Website',
+          from_name: 'ZeroCommute Website'
+        })
       })
 
-      // Clear success message after 5 seconds
+      const result = await response.json()
+      
+      if (result.success) {
+        setSubmitMessage('Thank you for your interest! We\'ll be in touch within 24 hours.')
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          message: ''
+        })
+      } else {
+        setSubmitMessage('Sorry, there was an error sending your message. Please try again.')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitMessage('Sorry, there was an error sending your message. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+      // Clear message after 5 seconds
       setTimeout(() => setSubmitMessage(''), 5000)
-    }, 1000)
+    }
   }
 
   // Contact information data
