@@ -2,104 +2,6 @@
 
 import { useState } from 'react'
 
-// FAQ Component with dropdown functionality
-function FAQSection() {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
-
-  const faqs = [
-    {
-      question: "How quickly can we start a pilot program?",
-      answer: "We can launch a pilot program within 2-3 weeks of agreement, including route planning, app setup, and shuttle deployment. Our team handles all the technical setup while you focus on employee communication."
-    },
-    {
-      question: "What's the minimum employee count for a pilot?",
-      answer: "Our pilot programs work best with 50+ employees, but we can accommodate smaller teams for enterprise clients. The key is having enough demand to justify dedicated route optimization."
-    },
-    {
-      question: "How do you measure carbon impact?",
-      answer: "We use real-time GPS tracking, fuel consumption data, and certified carbon calculators to provide accurate CO₂ reduction metrics. You'll receive detailed ESG reports with quantifiable sustainability impact data."
-    },
-    {
-      question: "What happens after the pilot period?",
-      answer: "We provide detailed impact reports and can scale to full operations based on pilot results and corporate objectives. Most clients see immediate ROI and choose to expand to additional routes."
-    },
-    {
-      question: "How much does the service cost?",
-      answer: "Pricing varies based on route complexity, employee count, and service frequency. Most corporate clients save 20-30% compared to current transportation allowances while achieving net-zero goals."
-    },
-    {
-      question: "What technology do employees need?",
-      answer: "Just a smartphone! Our mobile app works on iOS and Android, with simple QR code boarding. No special hardware or complex setup required for employees."
-    }
-  ]
-
-  const toggleFAQ = (index: number) => {
-    setOpenFAQ(openFAQ === index ? null : index)
-  }
-
-  return (
-    <section className="section-padding bg-gray-50">
-      <div className="container-max">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-deep-navy mb-4">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Find answers to common questions about ZeroCommute's corporate shuttle services
-          </p>
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          {faqs.map((faq, index) => (
-            <div key={index} className="mb-4">
-              <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:bg-gray-50"
-                  aria-expanded={openFAQ === index}
-                >
-                  <h3 className="text-lg font-semibold text-deep-navy pr-4">
-                    {faq.question}
-                  </h3>
-                  <div className={`flex-shrink-0 w-6 h-6 text-dark-green transition-transform duration-300 ${openFAQ === index ? 'rotate-45' : ''}`}>
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                  </div>
-                </button>
-                
-                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openFAQ === index 
-                    ? 'max-h-96 opacity-100' 
-                    : 'max-h-0 opacity-0'
-                }`}>
-                  <div className="px-6 pb-5">
-                    <div className="pt-2 border-t border-gray-100">
-                      <p className="text-gray-600 leading-relaxed pt-3">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Additional CTA */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">Still have questions?</p>
-          <button className="inline-flex items-center px-6 py-3 bg-dark-green text-white rounded-lg font-semibold hover:bg-opacity-90 transition-colors duration-300">
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
-            Schedule a Call
-          </button>
-        </div>
-      </div>
-    </section>
-  )
-}
 
 // Contact page with form and contact information
 export default function Contact() {
@@ -163,8 +65,8 @@ export default function Contact() {
     },
     {
       type: "Email",
-      value: "mail@zerocommute.ae",
-      href: "mailto:mail@zerocommute.ae",
+      value: "mail@zerocommute.io",
+      href: "mailto:mail@zerocommute.io",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -188,12 +90,11 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-deep-navy to-dark-green text-white">
         <div className="container-max text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="heading-xl mb-6">
             Contact Us
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Ready to reclaim commutes and cut Scope 3 emissions? Let's talk about transforming 
-            your corporate transportation with ZeroCommute.
+          <p className="body-lg text-gray-200 max-w-4xl mx-auto">
+            Ready to reclaim commutes and cut global Scope 3 emissions?
           </p>
         </div>
       </section>
@@ -204,13 +105,12 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-deep-navy mb-8">
+              <h2 className="heading-lg text-deep-navy mb-8">
                 Get In Touch
               </h2>
               
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Whether you're ready to pilot the UAE's first net-zero corporate shuttle network 
-                or want to learn more about our sustainability solutions, we're here to help.
+              <p className="body-lg text-gray-600 mb-8">
+                Join the world's first net-zero corporate shuttle network and lead the way in sustainable transportation.
               </p>
 
               {/* Contact Details */}
@@ -225,8 +125,8 @@ export default function Contact() {
                       {contact.icon}
                     </div>
                     <div>
-                      <p className="font-semibold text-deep-navy">{contact.type}</p>
-                      <p className="text-gray-600">{contact.value}</p>
+                      <p className="heading-sm text-deep-navy">{contact.type}</p>
+                      <p className="body-base text-gray-600">{contact.value}</p>
                     </div>
                   </a>
                 ))}
@@ -234,16 +134,16 @@ export default function Contact() {
 
               {/* Quick Links */}
               <div className="mt-12 p-6 bg-gradient-to-r from-soft-mint to-light-beige rounded-2xl">
-                <h3 className="text-xl font-bold text-deep-navy mb-4">Quick Actions</h3>
+                <h3 className="heading-sm text-deep-navy mb-4">Quick Actions</h3>
                 <div className="space-y-3">
                   <button className="w-full text-left p-3 bg-white rounded-lg hover:shadow-md transition-shadow duration-300">
-                    📅 Schedule a pilot demo
+                    Schedule a Pilot Demo
                   </button>
                   <button className="w-full text-left p-3 bg-white rounded-lg hover:shadow-md transition-shadow duration-300">
-                    📊 Request impact calculator
+                    Request Impact Calculator
                   </button>
                   <button className="w-full text-left p-3 bg-white rounded-lg hover:shadow-md transition-shadow duration-300">
-                    📋 Download case studies
+                    Download Case Studies
                   </button>
                 </div>
               </div>
@@ -252,7 +152,7 @@ export default function Contact() {
             {/* Contact Form */}
             <div>
               <div className="card">
-                <h3 className="text-2xl font-bold text-deep-navy mb-6">
+                <h3 className="heading-md text-deep-navy mb-6">
                   Send Us a Message
                 </h3>
                 
@@ -265,7 +165,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-deep-navy mb-2">
+                    <label htmlFor="name" className="block body-base font-semibold text-deep-navy mb-2">
                       Full Name *
                     </label>
                     <input
@@ -282,7 +182,7 @@ export default function Contact() {
 
                   {/* Email Field */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-deep-navy mb-2">
+                    <label htmlFor="email" className="block body-base font-semibold text-deep-navy mb-2">
                       Work Email *
                     </label>
                     <input
@@ -299,7 +199,7 @@ export default function Contact() {
 
                   {/* Company Field */}
                   <div>
-                    <label htmlFor="company" className="block text-sm font-semibold text-deep-navy mb-2">
+                    <label htmlFor="company" className="block body-base font-semibold text-deep-navy mb-2">
                       Company *
                     </label>
                     <input
@@ -316,7 +216,7 @@ export default function Contact() {
 
                   {/* Message Field */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-deep-navy mb-2">
+                    <label htmlFor="message" className="block body-base font-semibold text-deep-navy mb-2">
                       Message *
                     </label>
                     <textarea
@@ -355,8 +255,8 @@ export default function Contact() {
                     )}
                   </button>
 
-                  <p className="text-sm text-gray-500 text-center">
-                    We respect your privacy and will never share your information.
+                  <p className="body-sm text-gray-500 text-center">
+                    (We respect your privacy and never share your information.)
                   </p>
                 </form>
               </div>
@@ -365,8 +265,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <FAQSection />
     </div>
   )
 }

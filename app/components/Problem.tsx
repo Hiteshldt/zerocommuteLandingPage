@@ -10,9 +10,9 @@ export default function Problem() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      stat: "2.5 Hours",
-      label: "Daily commute time wasted",
-      description: "UAE employees spend over 2.5 hours daily in traffic, reducing productivity and life quality"
+      stat: "1.5 Hours",
+      label: "Average daily commute wasted by employees in major global cities",
+      description: "Average daily commute wasted by employees in major global cities"
     },
     {
       icon: (
@@ -20,9 +20,9 @@ export default function Problem() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      stat: "65%",
-      label: "Of corporate Scope 3 emissions",
-      description: "Employee commuting represents the largest portion of corporate carbon footprint"
+      stat: "15%",
+      label: "Of corporate Scope 3 emissions come from employee commuting",
+      description: "Of corporate Scope 3 emissions come from employee commuting"
     },
     {
       icon: (
@@ -30,9 +30,9 @@ export default function Problem() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
       ),
-      stat: "AED 800",
-      label: "Monthly fuel cost per employee",
-      description: "Rising fuel prices burden employees with increasing transportation costs"
+      stat: "$140,000+",
+      label: "Annual fuel costs – burden for just 80 solo commuters",
+      description: "Annual fuel costs burden for just 80 solo commuters"
     },
     {
       icon: (
@@ -40,9 +40,9 @@ export default function Problem() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
         </svg>
       ),
-      stat: "40%",
-      label: "Office parking shortage",
-      description: "Limited parking creates stress and forces remote work, reducing collaboration"
+      stat: "70%",
+      label: "Of prime business hubs worldwide report parking shortages",
+      description: "Of prime business hubs worldwide report parking shortages"
     }
   ]
 
@@ -52,11 +52,10 @@ export default function Problem() {
         {/* Section Header */}
         <div className="text-center subsection-gap">
           <h2 className="heading-xl text-deep-navy mb-4">
-            The Corporate Commute Crisis
+            The Global Corporate Commute Crisis
           </h2>
           <p className="body-lg text-gray-600 max-w-4xl mx-auto">
-            UAE corporations face mounting pressure from inefficient commuting that impacts 
-            productivity, sustainability goals, and employee satisfaction.
+            Inefficient commuting is a worldwide challenge impacting productivity, sustainability goals, and employee well-being.
           </p>
         </div>
 
@@ -109,7 +108,7 @@ export default function Problem() {
 
           {/* Content */}
           <div className="space-y-6">
-            <h3 className="heading-lg text-deep-navy">
+            <h3 className="heading-md text-deep-navy">
               Your Employees Deserve Better
             </h3>
             
@@ -121,8 +120,8 @@ export default function Problem() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-semibold text-deep-navy">Stress and Burnout</p>
-                  <p className="text-gray-600 text-sm">Daily traffic stress impacts mental health and productivity</p>
+                  <p className="heading-sm text-deep-navy">Stress and Burnout</p>
+                  <p className="body-base text-gray-600">Daily traffic stress impacts mental health and productivity</p>
                 </div>
               </div>
 
@@ -133,8 +132,8 @@ export default function Problem() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-semibold text-deep-navy">ESG Compliance Pressure</p>
-                  <p className="text-gray-600 text-sm">Failing to meet sustainability targets and carbon reduction goals</p>
+                  <p className="heading-sm text-deep-navy">ESG Compliance Pressure</p>
+                  <p className="body-base text-gray-600">Failing to meet sustainability targets and carbon reduction goals</p>
                 </div>
               </div>
 
@@ -145,8 +144,8 @@ export default function Problem() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-semibold text-deep-navy">Rising Operational Costs</p>
-                  <p className="text-gray-600 text-sm">Employee transport allowances and parking costs continue to increase</p>
+                  <p className="heading-sm text-deep-navy">Rising Operational Costs</p>
+                  <p className="body-base text-gray-600">Employee transport allowances and parking costs continue to increase</p>
                 </div>
               </div>
             </div>

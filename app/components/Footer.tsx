@@ -61,14 +61,14 @@ export default function Footer() {
               <h3 className="text-white font-semibold mb-4">Get In Touch</h3>
               <div className="space-y-3">
                 <a
-                  href="mailto:mail@zerocommute.ae"
+                  href="mailto:mail@zerocommute.io"
                   className="flex items-center space-x-3 text-gray-300 hover:text-soft-mint transition-colors duration-200 text-sm"
                 >
                   <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
-                  <span>mail@zerocommute.ae</span>
+                  <span>mail@zerocommute.io</span>
                 </a>
                 
                 <a
